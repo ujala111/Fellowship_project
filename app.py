@@ -4,7 +4,7 @@ from flask import render_template #import this module to render html templates
 from flask import make_response
 from flask import request
 from flask import abort
-import requests #import this module to send requests to an url for Json data
+import requests, sys
 app = Flask("__name__") #object that is instance of the flask framework.
 
 @app.route('/') #to give a url
@@ -21,9 +21,9 @@ def authors():
         users[post['userId']]['count']+=1
     return render_template('authors.html',users=users)
 	
-@app.route('/input')
-def input():
-    return render_template('input.html')
+@app.route('/inputcookie')
+def inputCookie():
+    return render_template('inputcookie.html')
 
 @app.route('/setcookie', methods = ['POST', 'GET'])
 def setcookie():
@@ -46,6 +46,21 @@ def getcookie():
 def deny():
     return abort(404)
 	
+@app.route('/html')
+def html():
+    return(render_template('hello.html'))
+	
+@app.route('/input')
+def input():
+    return(render_template('input.html'))
+	
+@app.route('/display', methods = ['POST', 'GET'])
+def display():
+   if request.method == 'POST':
+       user = request.form['post']
+       print(user, file=sys.stdout)
+   return 'Output is on terminal'
+   
 if __name__ == "__main__": #to run the app.
     app.run()
 	
