@@ -35,7 +35,7 @@
 <p><strong>Task-4</strong></p>
 
 <p>This is just a part of previous task. In this task we have to get cookie using cookie name. I used request.cookies.get() method to get cookie in two variables and return a string with contaning these variables as '+name+ and '+age+'. Task-4 is completed. Now just check http://localhost:5000/getcookie </p>
-<p>To get cookie - http://localhost:5000/getcookie/ </p>
+<p>To get cookie - http://localhost:5000/getcookie </p>
 
 <p><strong>Task-5</strong></p>
 
