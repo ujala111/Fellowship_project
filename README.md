@@ -39,7 +39,7 @@
 
 <p><strong>Task-5</strong></p>
 
-<p>This task was also simple. Just need to render an HTML to show "not found error" or use abort() method with 404 error. I used abort() method. Hence first I added abort module from the flask. and just passed the error code(404) in the parameter and return this abort method with 404 error and completed this task. </p>
+<p>This task was also simple. Just need to render an HTML to show "Unauthorised Access" or use abort() method with 401 error. I used abort() method. Hence first I added abort module from the flask. and just passed the error code(401) in the parameter and return this abort method with 401 error and completed this task. </p>
 <p>To deny requests at Robots.txt- http://localhost:8080/robots.txt </p>
 
 <p><strong>Task-6</strong></p>
