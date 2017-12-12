@@ -44,7 +44,7 @@ def getcookie():
 	
 @app.route('/robots.txt')
 def deny():
-    return abort(404)
+    return abort(401)
 	
 @app.route('/html')
 def html():
